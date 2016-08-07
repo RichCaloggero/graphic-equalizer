@@ -1,0 +1,21 @@
+{
+  "name": "graphicEqualizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "graphicEqualizer.js",
+  "scripts": {
+    "build": "browserify --standalone GraphicEqualizer sources/graphicEqualizer.js -o dist/graphicEqualizer.js && browserify --standalone GraphicEqualizerUi sources/graphicEqualizerUi.js  -t browserify-mustache sources/graphicEqualizer.mustache -o dist/graphicEqualizerUi.js",
+    "watch": "watchify sources/graphicEqualizer.js sources/graphicEqualizerUi.js sources/demo.js -t browserify-mustache sources/graphicEqualizer.mustache -o demo.bundle.js --debug --verbose",
+    "t": "watchify t.js -o t.bundle.js --verbose --debug",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rjc",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^13.1.0",
+    "browserify-mustache": "0.0.4",
+    "budo": "^8.3.0",
+    "hogan.js": "^3.0.2",
+    "jquery": "^3.1.0"
+  }
+}
