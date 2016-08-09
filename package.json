@@ -5,7 +5,8 @@
   "main": "graphicEqualizer.js",
   "scripts": {
     "build": "browserify --standalone GraphicEqualizer sources/graphicEqualizer.js -o dist/graphicEqualizer.js && browserify --standalone GraphicEqualizerUi sources/graphicEqualizerUi.js  -t browserify-mustache sources/graphicEqualizer.mustache -o dist/graphicEqualizerUi.js",
-    "watch": "watchify sources/graphicEqualizer.js sources/graphicEqualizerUi.js sources/demo.js -t browserify-mustache sources/graphicEqualizer.mustache -o demo.bundle.js --debug --verbose",
+    "watch": "watchify sources/graphicEqualizer.js sources/graphicEqualizerUi.js demo.js -t browserify-mustache sources/graphicEqualizer.mustache -o demo.bundle.js --debug --verbose",
+    "tuna": "watchify sources/tunaModel.js sources/tunaUi.js tunaDemo.js  -t  browserify-mustache sources/tunaUi.mustache  -o tunaDemo.bundle.js --verbose --debug",
     "t": "watchify t.js -o t.bundle.js --verbose --debug",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,6 +1,7 @@
 module.exports = GraphicEqualizer;
 
 function GraphicEqualizer (minFrequency, bandCount, q, input, output) {
+var self = this;
 var bands;
 var filters;
 var outputGain;
@@ -8,7 +9,6 @@ var audio;
 
 if (! (this instanceof GraphicEqualizer)) return new GraphicEqualizer (minFrequency, bandCount, q, input, output);
 
-var self = this;
 audio = input.context;
 self.Q = q;
 self.bandCount = bandCount;

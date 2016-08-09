@@ -1,10 +1,10 @@
-var audio = new AudioContext ();
-
-var GraphicEqualizer = require ("./graphicEqualizer");
-var GraphicEqualizerUi = require ("./graphicEqualizerUi");
+var GraphicEqualizer = require ("./sources/graphicEqualizer");
+var GraphicEqualizerUi = require ("./sources/graphicEqualizerUi");
 var $ = require ("jquery");
+
 var audioElement = $("#player")[0];
 var eq, ui, source;
+var audio = new AudioContext ();
 
 source = audio.createMediaElementSource (audioElement);
 
